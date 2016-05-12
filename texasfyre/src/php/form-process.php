@@ -58,6 +58,7 @@ if ($success && $errorMSG == ""){
    echo "success";
 }else{
     if($errorMSG == ""){
+        echo $success;
         echo "Something went wrong :(";
     } else {
         echo $errorMSG;
