@@ -91,8 +91,13 @@
 
       function(response) {
 
-        document.getElementById('picture').innerHTML = console.log(response);
-        document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>";
+        
+        var obj = JSON.parse(response);
+        var images = '';
+        for(var i = 0; i < obj.length; ++i) 
+          images += '<img src="' + obj[i]['picture'] +'" />';
+          document.getElementById('picture').innerHTML = console.log(images);
+        document.getElementById('picture').innerHTML = images;
     });
   };
 </script>
