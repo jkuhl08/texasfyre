@@ -92,10 +92,10 @@
       function(response) {
 
         
-        var obj = JSON.parse(response);
+        //var obj = JSON.parse(response);
         var images = '';
         for(var i = 0; i < obj.length; ++i) 
-          images += '<img src="' + obj[i]['picture'] +'" />';
+          images += '<img src="' + response[i]['picture'] +'" />';
           document.getElementById('picture').innerHTML = console.log(images);
         document.getElementById('picture').innerHTML = images;
     });
