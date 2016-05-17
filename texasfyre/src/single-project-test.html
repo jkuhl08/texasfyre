@@ -99,7 +99,7 @@
       function(response) {
         var images = '';
         for(var i = 0; i < 10; i++) {
-          images = +- '<img src="' + response.data[i].picture + '" />';
+          images += '<img src="' + response.data[i].picture + '" />';
           document.getElementById('pictures').innerHTML = console.log(images);
         }
         document.getElementById('pictures').innerHTML = images;
