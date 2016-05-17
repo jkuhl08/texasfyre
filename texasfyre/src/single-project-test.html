@@ -87,19 +87,21 @@
   }
 
   function getProfilePicture() {
-    FB.api('/me/photos', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, 
-
-      function(response) {
-
-        
-        //var obj = JSON.parse(response);
-        var images = '';
-        for(var i = 0; i < response.length; ++i) 
-          images += '<img src="' + response[i]['picture'] +'" />';
-          document.getElementById('picture').innerHTML = console.log(images);
-        document.getElementById('picture').innerHTML = images;
+    FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, function(response) {document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>";
     });
   };
+
+  function getProfilePictures() {
+    FB.api('/me/photos', 'GET', {"fields": "picture.width(150).height(150)"}, 
+    
+      function(response) {
+        
+        //for(var i = 0; i < response.)
+        document.getElementById('picture').innerHTML = console.log(response);
+      }
+    });
+  };
+
 </script>
 
 <!--
