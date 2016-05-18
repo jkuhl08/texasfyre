@@ -97,7 +97,7 @@
       document.getElementById('pictures').innerHTML = images;
     });*/
     function(response) {
-  
+      document.getElementById('pictures').innerHTML = console.log(response);
       document.getElementById('fbpicture1').innerHTML = '<img src="' + response.data[0].picture + ' style="width:100%;"/>';
       document.getElementById('fbpicture2').innerHTML = '<img src="' + response.data[1].picture + ' style="width:100%;"/>';
       document.getElementById('fbpicture3').innerHTML = '<img src="' + response.data[2].picture + ' style="width:100%;"/>';
