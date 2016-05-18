@@ -86,7 +86,7 @@
   };
 
   function getProfilePictures() {
-    FB.api('/me/photos', 'GET', {"fields": "picture.width(150).height(150)"}, 
+    FB.api('/me/photos', 'GET', {"fields": "picture"}, 
     
     /*function(response) {
       var images = '';
