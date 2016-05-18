@@ -88,12 +88,18 @@
   function getProfilePictures() {
     FB.api('/me/photos', 'GET', {"fields": "picture.width(150).height(150)"}, 
     
-      function(response) {
-        var images = '';
-        for(var i = 0; i < 25; i++) {
-          images += '<img src="' + response.data[i].picture + '" />';
-          document.getElementById('pictures').innerHTML = console.log(images);
-        }
-        document.getElementById('pictures').innerHTML = images;
+    /*function(response) {
+      var images = '';
+      for(var i = 0; i < 25; i++) {
+        images += '<img src="' + response.data[i].picture + '" />';
+        document.getElementById('pictures').innerHTML = console.log(images);
+      }
+      document.getElementById('pictures').innerHTML = images;
+    });*/
+    function(response) {
+  
+      document.getElementById('pictures').innerHTML = "<img src=' + response.data[0].picture + ' style='width:100%;'/>";
+      document.getElementById('pictures').innerHTML = "<img src=' + response.data[1].picture + ' style='width:100%;'/>";
+      document.getElementById('pictures').innerHTML = "<img src=' + response.data[2].picture + ' style='width:100%;'/>";
     });
   };
