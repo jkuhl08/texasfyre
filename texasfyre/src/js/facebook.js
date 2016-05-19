@@ -87,8 +87,9 @@
 
   function getProfilePictures() {
     FB.api('/me/photos', 'GET', {"fields": "picture"}, 
-    var carousel = '';
+    
     function(response) {
+      var carousel = '';
       for(var i = 0; i < 25; i++) {
         carousel += '<div class="item"><a class="lightbox" title="This is an image title" href="images/portfolio-1/1.jpg" data-lightbox-gallery="gallery2"><div class="thumb-overlay"><i class="fa fa-arrows-alt"></i></div><img src="' + response.data[i].picture + '" /></a></div>';
         document.getElementById('pictures').innerHTML = console.log(carousel);
