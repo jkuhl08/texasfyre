@@ -88,7 +88,8 @@
   };
 
   function getProfilePictures() {
-    FB.api('/me/photos?since=2012-01-01T00:00:000%2B0000&until=2016-05-05T00:00:00%2B0000', 'GET', {"fields": "picture"}, 
+    FB.api('/me/photos', 'GET', {"fields": "picture"}, 
+    
     
     function(response) {
       var images = '';
