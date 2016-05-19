@@ -81,7 +81,9 @@
 
   function getProfilePicture() {
     FB.api('/me', 'GET', {fields: 'first_name,last_name,name,id,picture.width(150).height(150)'}, 
-      function(response) {document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>";
+      function(response) {
+        document.getElementById('picture').innerHTML = "<img src='" + response.picture.data.url + "'>";
+        document.getElementById('picture').innerHTML = response.name.data;
     });
   };
 
