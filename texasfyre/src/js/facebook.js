@@ -94,6 +94,6 @@
         carousel += '<div class="item"><a class="lightbox" title="This is an image title" href="images/portfolio-1/1.jpg" data-lightbox-gallery="gallery2"><div class="thumb-overlay"><i class="fa fa-arrows-alt"></i></div><img src="' + response.data[i].picture + '" /></a></div>';
         document.getElementById('pictures').innerHTML = console.log(carousel);
       }
-      document.getElementById('pictures').innerHTML = carousel;
+      document.getElementById('pictures').innerHTML = '<div class="touch-slider project-slider" id="pictures">' + carousel + '</div';
     });
   };
