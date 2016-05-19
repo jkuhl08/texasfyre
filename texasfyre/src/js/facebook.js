@@ -95,5 +95,4 @@
       }
       document.getElementById('pictures').innerHTML = carousel;
     });
-    
   };
