@@ -88,17 +88,11 @@
   function getProfilePictures() {
     FB.api('/me/photos', 'GET', {"fields": "picture"}, 
     
-    /*function(response) {
+    function(response) {
       var images = '';
       for(var i = 0; i < 25; i++) {
-        images += '<img src="' + response.data[i].picture + '" />';
-        document.getElementById('pictures').innerHTML = console.log(images);
-      }
-      document.getElementById('pictures').innerHTML = images;
-    });*/
-    function(response) {
-      document.getElementById('fbpicture1').innerHTML = '<img src="' + response.data[0].picture + '" style="width:100%;"/>';
-      document.getElementById('fbpicture2').innerHTML = '<img src="' + response.data[1].picture + '" style="width:100%;"/>';
-      document.getElementById('fbpicture3').innerHTML = '<img src="' + response.data[2].picture + '" style="width:100%;"/>';
+        carousel += '<div class="item"><a class="lightbox" title="This is an image title" href="images/portfolio-1/1.jpg" data-lightbox-gallery="gallery2"><div class="thumb-overlay"><i class="fa fa-arrows-alt"></i></div><img src="' + response.data[i].picture + '" /></a></div>'
+        }
+      document.getElementById('pictures').innerHTML = carousel;
     });
   };
