@@ -97,6 +97,8 @@ $(document).ready(function ($) {
   /*  Nav Menu & Search
   /*----------------------------------------------------*/
   
+  $("#headerInsert").load("../header.html");
+
   $(".nav > li:has(ul)").addClass("drop");
   $(".nav > li.drop > ul").addClass("dropdown");
   $(".nav > li.drop > ul.dropdown ul").addClass("sup-dropdown");
